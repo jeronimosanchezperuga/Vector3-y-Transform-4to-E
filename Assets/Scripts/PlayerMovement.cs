@@ -1,0 +1,30 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class PlayerMovement : MonoBehaviour
+{
+    public Vector3 playerPosition;
+    public float rotationSpeed;
+    public float movementSpeed;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        playerPosition = transform.position + new Vector3(0,1,0);
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (Input.GetKey(KeyCode.W))
+        {
+            transform.position += new Vector3(movementSpeed, 0, 0);
+        }
+
+        //
+        //transform.eulerAngles += new Vector3(0, rotationSpeed, 0);
+        //transform.localScale += new Vector3(0.1f, 0, 0);
+    }
+}
